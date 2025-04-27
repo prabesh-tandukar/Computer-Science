@@ -38,3 +38,35 @@
   - chars = len(s)
 
 ### Slicing to get One Character in a String:
+
+- Square brackets used to perform indexing into a string to get the value at a certain index/position.
+  s = "abc"
+  s[0] -> "a"
+  s[1] -> "b"
+  s[2] -> "c"
+  s[3] -> error/ index out of bounds
+
+  s[-1] -> "c"
+  s[-2] -> "b"
+  s[-3] -> "a"
+
+### Slicing to get a Substring:
+
+- Can slice string using [start:stop:step]
+- Get characters at start up to and including stop-1 taking every step characters
+- If give two numbers, [start:stop], step=1 by default
+- If give one number, you are back to indexing for the character at one location (prev slide)
+- You can also omit numbers and leave just colons
+
+### Slicing examples:
+
+- Can slice strings using [start:stop:step]
+- Look at step first. +ve means go left-to-right, -ve means go right-to-left
+- s = "abcdefgh"
+- s[3:6] => "def"
+- s[3:6:2] => "df"
+- s[:] => "abcdefgh"
+- s[::-1] -> "hgfedcba"
+- s[4:1:-2] => "ec"
+
+### Immutable Strings:
