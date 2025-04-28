@@ -41,15 +41,18 @@
 
 - Square brackets used to perform indexing into a string to get the value at a certain index/position.
 
-  - s = "abc"
-  - s[0] -> "a"
-  - s[1] -> "b"
-  - s[2] -> "c"
-  - s[3] -> error/ index out of bounds
+  ```
+    s = "abc"
+    s[0] -> "a"
+    s[1] -> "b"
+    s[2] -> "c"
+    s[3] -> error/ index out of bounds
 
-  - s[-1] -> "c"
-  - s[-2] -> "b"
-  - s[-3] -> "a"
+    s[-1] -> "c"
+    s[-2] -> "b"
+    s[-3] -> "a"
+
+  ```
 
 ### Slicing to get a Substring:
 
@@ -63,12 +66,16 @@
 
 - Can slice strings using [start:stop:step]
 - Look at step first. +ve means go left-to-right, -ve means go right-to-left
-- s = "abcdefgh"
-- s[3:6] => "def"
-- s[3:6:2] => "df"
-- s[:] => "abcdefgh"
-- s[::-1] -> "hgfedcba"
-- s[4:1:-2] => "ec"
+
+  ```
+  s = "abcdefgh"
+  s[3:6] => "def"
+  s[3:6:2] => "df"
+  s[:] => "abcdefgh"
+  s[::-1] -> "hgfedcba"
+  s[4:1:-2] => "ec"
+
+  ```
 
 ### Immutable Strings:
 
