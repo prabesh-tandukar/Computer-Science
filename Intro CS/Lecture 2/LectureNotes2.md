@@ -40,15 +40,16 @@
 ### Slicing to get One Character in a String:
 
 - Square brackets used to perform indexing into a string to get the value at a certain index/position.
-  s = "abc"
-  s[0] -> "a"
-  s[1] -> "b"
-  s[2] -> "c"
-  s[3] -> error/ index out of bounds
 
-  s[-1] -> "c"
-  s[-2] -> "b"
-  s[-3] -> "a"
+  - s = "abc"
+  - s[0] -> "a"
+  - s[1] -> "b"
+  - s[2] -> "c"
+  - s[3] -> error/ index out of bounds
+
+  - s[-1] -> "c"
+  - s[-2] -> "b"
+  - s[-3] -> "a"
 
 ### Slicing to get a Substring:
 
@@ -71,4 +72,13 @@
 
 ### Immutable Strings:
 
-a
+- Strings are "immutable" - cannot be modified
+- You can create new objects that are versions of the original ones.
+- Variable name can only be bound to one object
+
+  ```
+  s = "car"
+  s[0] = 'b' -> gives an error
+  s = 'b'+s[1:len(s)] -> is allowed, s bound to new object
+
+  ```
