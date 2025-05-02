@@ -181,9 +181,3 @@ print(f"{x} factorial is {factorial}")
   - Use `range()` to generate a sequence of numbers.
 
 - Practice writing and tracing loops to build confidence!
-
-```
-
----
-
-```
