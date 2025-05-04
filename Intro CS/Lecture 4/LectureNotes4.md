@@ -86,5 +86,3 @@ while abs(guess**2 - x) >= epsilon:
 - These methods illustrate how computers can approach solutions even when a precise answer isn't easily computable.
 
 ---
-
-Would you like a visual summary (e.g., mind map or flowchart) of these concepts?
