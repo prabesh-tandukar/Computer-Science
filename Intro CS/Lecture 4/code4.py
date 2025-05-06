@@ -42,13 +42,20 @@
 
 #Guess and check cube root
 
-cube = int(input("Enter an integer: "))
-for guess in range(abs(cube) + 1):
-    if guess**3 >= abs(cube):
-        break
-if guess**3 != abs(cube):
-    print(cube, "is not a  perfect cube")
-else:
-    if cube < 0:
-        guess = -guess
-    print("cube root of " + str(cube) + " is " + str(guess))
+# cube = int(input("Enter an integer: "))
+# for guess in range(abs(cube) + 1):
+#     if guess**3 >= abs(cube):
+#         break
+# if guess**3 != abs(cube):
+#     print(cube, "is not a  perfect cube")
+# else:
+#     if cube < 0:
+#         guess = -guess
+#     print("cube root of " + str(cube) + " is " + str(guess))
+
+
+x = 0
+for i in range(10):
+    x += 0.1
+print(x == 1)
+print(x, "==", 10*0.1)
