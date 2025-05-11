@@ -1,5 +1,7 @@
 <script setup></script>
 
-<template></template>
+<template>
+  <div>Workout</div>
+</template>
 
 <style scoped></style>

@@ -15,6 +15,7 @@
         src="https://avatars.githubusercontent.com/u/72059782?v=4"
       />
       <p>prabesh-tandukar</p>
+      <i class="fa-brands fa-github"></i>
     </a>
   </footer>
 </template>
