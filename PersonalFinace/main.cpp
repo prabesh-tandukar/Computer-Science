@@ -6,8 +6,7 @@ int main() {
     int expense;
     string title;
     string date;
-    vector<string> categories = {};
-
+    // vector<string> categories = {};
 
 
     cout << "Enter your expense: ";
@@ -27,3 +26,5 @@ int main() {
 
     return 0;
 }
+
+
