@@ -25,12 +25,46 @@ const rl = readline.createInterface({
 });
 
 async function main() {
+  let session_highscore = 0;
+  let gameOn = true;
+
+  while (gameOn) {
+    const play = await rl.question("Ready for a guess ? ( Y or N ): ");
+    if (play === "y" || play === "Y") {
+      gameOn = true;
+      session_highscore = game(session_highscore);
+      console.log(session_highscore);
+    } else if (play === "n" || play === "N") {
+      gameOn = false;
+      break;
+    } else {
+      gameOn = true;
+      console.log("--- Please enter Y for Yes or N for No ---");
+      continue;
+    }
+  }
+
+  rl.close();
+}
+
+main();
+
+async function game(sess_score) {
+  let highscore = 0;
   for (let i = 0; i < 10; i++) {
     const guess = await rl.question("Guess the number from 1 to 10: ");
     const guessNum = Number(guess);
     if (guessNum === randomNumber) {
       attempts++;
       console.log(`Yes ${guess} is the right number. Score: ${score} `);
+      if (score > sess_score) {
+        highscore = score;
+        console.log(`You made the highscore: ${highscore}`);
+      }
+      main();
+      attempts = 0;
+      score = 10;
+
       break;
     } else {
       attempts++;
@@ -46,7 +80,11 @@ async function main() {
       );
     }
   }
-  rl.close();
+  return highscore;
+  // rl.close();
 }
 
-main();
+//Notes: made some progress like two loops one game loop and one main loop
+//but having problem passing highscore from one game to another
+//having problem rerunning the game loop logic fresh once played
+//
