@@ -61,7 +61,7 @@ async function game(sess_score) {
         highscore = score;
         console.log(`You made the highscore: ${highscore}`);
       }
-      main();
+      // main();
       attempts = 0;
       score = 10;
 
