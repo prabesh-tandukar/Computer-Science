@@ -67,4 +67,26 @@ console.log(calculator("divide", 27, 3, 3));
 //Daily tests:
 //declare variables and understand the difference between let, const, var?
 //these all let us declare variables
-//
+//let: declare a vaiable which can be reassigned later, it is block scoped meaning the variable will be only available to the block where it is declared.
+//const: declare a variable which is constant meaning its value cannot be altered once it has been set or declared at the moment of initialization
+//var: var is a old style of declaring variable which still works but has a problem of hoisting meaning variables declared with var are not block scope its function scoped or globalscoped, so a variable declared with var is available before it is declared or initialized but if called before hand it gives undefined value which is variable hoisting
+
+//create objects and arrays
+let randomObj = {
+  sampleKey1: "sampleValue1",
+  sampleKey2: "sampleValue2",
+  sampleKey3: true,
+  sampleKey4: 55,
+  sampleKey5: ["arrays", "yo", false, "hahaha"],
+};
+
+console.log(randomObj.sampleKey1);
+console.log(randomObj.sampleKey5[0]);
+
+//write basic functions
+
+let func = function () {
+  return 5;
+};
+
+console.log(func());
