@@ -36,12 +36,12 @@ function calculator(operation, ...theArgs) {
   }
 }
 
-console.log(calculator("add", 10, 3, 2));
-console.log(calculator("subtract", 10, 3, 2));
-console.log(calculator("add", 10));
-console.log(calculator("subtract", 10));
-console.log(calculator("multiply", 3, 3, 3));
-console.log(calculator("divide", 27, 3, 3));
+// console.log(calculator("add", 10, 3, 2));
+// console.log(calculator("subtract", 10, 3, 2));
+// console.log(calculator("add", 10));
+// console.log(calculator("subtract", 10));
+// console.log(calculator("multiply", 3, 3, 3));
+// console.log(calculator("divide", 27, 3, 3));
 
 // function add(a, b) {
 //   return a + b;
@@ -72,21 +72,58 @@ console.log(calculator("divide", 27, 3, 3));
 //var: var is a old style of declaring variable which still works but has a problem of hoisting meaning variables declared with var are not block scope its function scoped or globalscoped, so a variable declared with var is available before it is declared or initialized but if called before hand it gives undefined value which is variable hoisting
 
 //create objects and arrays
-let randomObj = {
-  sampleKey1: "sampleValue1",
-  sampleKey2: "sampleValue2",
-  sampleKey3: true,
-  sampleKey4: 55,
-  sampleKey5: ["arrays", "yo", false, "hahaha"],
-};
+// let randomObj = {
+//   sampleKey1: "sampleValue1",
+//   sampleKey2: "sampleValue2",
+//   sampleKey3: true,
+//   sampleKey4: 55,
+//   sampleKey5: ["arrays", "yo", false, "hahaha"],
+// };
 
-console.log(randomObj.sampleKey1);
-console.log(randomObj.sampleKey5[0]);
+// console.log(randomObj.sampleKey1);
+// console.log(randomObj.sampleKey5[0]);
 
 //write basic functions
 
-let func = function () {
-  return 5;
+// let func = function () {
+//   return 5;
+// };
+
+// console.log(func());
+
+///////////////////////
+//fucntion
+
+const createPet = function (name) {
+  let sex;
+
+  const pet = {
+    //setName(newName) is equivalent to setName: function (newName) in this context
+    setName(newname) {
+      name = newname;
+    },
+    getName() {
+      return name;
+    },
+    getSex() {
+      return sex;
+    },
+    setSex(newSex) {
+      if (
+        typeof newSex === "string" &&
+        (newSex.toLowerCase() === "male" || newSex.toLowerCase() === "female")
+      ) {
+        sex = newSex;
+      }
+    },
+  };
+  return pet;
 };
 
-console.log(func());
+const pet = createPet("Vivie");
+console.log(pet.getName());
+
+pet.setName("Oliver");
+pet.setSex("male");
+console.log(pet.getSex()); //male
+console.log(pet.getName()); //oliver
