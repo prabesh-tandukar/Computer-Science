@@ -127,3 +127,42 @@ pet.setName("Oliver");
 pet.setSex("male");
 console.log(pet.getSex()); //male
 console.log(pet.getName()); //oliver
+
+//Control Flow and error handling
+// throw "Error2";
+// throw 42;
+// throw true;
+// throw {
+//   toString() {
+//     return "I'm an object";
+//   },
+// };
+
+/** 
+ * 
+**Project 3**: Contact Manager (Basic)
+
+- Create an array to store contacts
+- Build functions to add, find, and list contacts
+- Practice working with objects in arrays and array methods
+ */
+
+let contacts = [];
+
+function addContacts(name) {
+  contacts.push(name);
+}
+
+function findContacts(name) {
+  available = contacts.indexOf(name);
+  if (available !== -1) {
+    console.log(`${name} is at index ${available}`);
+  } else {
+    console.log("Contact not available");
+  }
+}
+
+addContacts("Gilbert");
+console.log(contacts);
+findContacts("Gilbert");
+findContacts("Ram");
