@@ -147,7 +147,7 @@ console.log(pet.getName()); //oliver
 - Practice working with objects in arrays and array methods
  */
 
-let contacts = [];
+let contacts = ["Ram"];
 
 function addContacts(name) {
   contacts.push(name);
@@ -162,7 +162,15 @@ function findContacts(name) {
   }
 }
 
+function listContacts(arr) {
+  arr.forEach((item, index) => {
+    console.log(`${index}: ${item}`);
+  });
+}
+
 addContacts("Gilbert");
 console.log(contacts);
 findContacts("Gilbert");
 findContacts("Ram");
+
+listContacts(contacts);
