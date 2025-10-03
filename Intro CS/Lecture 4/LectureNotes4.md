@@ -1,8 +1,38 @@
-Here are concise notes for the lecture in the PDF file titled **"MIT 6.100L Fall 2022 – Lecture 4"**:
+## **MIT 6.100L Lecture 4: Iteration, While Loops, and Approximation Algorithms**
 
 ---
 
-## **MIT 6.100L Lecture 4: Iteration, While Loops, and Approximation Algorithms**
+### **0. Last Lecture:**
+
+- Looping Mechanism
+  - While and for loop
+
+-While loops:
+
+- Loop as long as a condition is true
+- Need to make sure we don't enter an infinite loop
+
+- For Loops
+  - Loop variable takes on values in a sequence, one at a time
+  - Can loop over ranges of numbers
+
+### break STATEMENT:
+
+- Immediately exits whatever loop it is in
+- Skips remaining expressions in code block
+- Exits only innermost loop!
+
+```python
+
+while <condition_1>:
+  while <condition_2>:
+    <expression_a>
+    break
+    <expression_b>
+  <expression_c>
+```
+
+Here in this code
 
 ### **1. Iteration Concepts**
 
